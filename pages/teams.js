@@ -3,7 +3,7 @@ import BottomGlitter from '@/components/StyledText/BottomGlitter';
 import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
-import { TeamData2k19, TeamData2k20, TeamData2k21 } from '../lib/data/TeamData';
+import { TeamData2k20, TeamData2k21 } from '../lib/data/TeamData';
 import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function Teams() {
@@ -32,14 +32,14 @@ function Teams() {
         </div>
         <h2 className={Styles.postHead}>Board Of Directors</h2>
         <div className={Styles.cardContainer}>
-          {TeamData2k19.slice(0, 20).map((item, index) => {
+          {TeamData2k20.slice(0, 20).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
-                imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
-                lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
+                imageSrc={`/teams/2k20/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k20/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
